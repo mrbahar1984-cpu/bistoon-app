@@ -1,0 +1,62 @@
+
+export enum LogType {
+  CLOCK_IN = 'CLOCK_IN',
+  CLOCK_OUT = 'CLOCK_OUT',
+  HOURLY_LEAVE_START = 'HOURLY_LEAVE_START',
+  HOURLY_LEAVE_END = 'HOURLY_LEAVE_END'
+}
+
+export type RequestStatus = 'PENDING' | 'APPROVED' | 'REJECTED';
+export type LeaveType = 'DAILY_LEAVE' | 'HOURLY_PASS' | 'REMOTE_WORK';
+
+export interface LeaveRequest {
+  id: string;
+  employee_id: string;
+  employee_name?: string;
+  // Fix: Added employees property to support Supabase join results (e.g., in AdminPanel)
+  employees?: { name: string };
+  type: LeaveType;
+  amount: number; // For hourly/remote it's hours, for daily it's days (usually 1)
+  shamsi_date: string;
+  description: string;
+  status: RequestStatus;
+  timestamp: number;
+}
+
+export interface AttendanceLog {
+  id: string;
+  employee_id: string;
+  timestamp: number;
+  type: LogType;
+  shamsiDate: string;
+  time: string;
+  is_manual?: boolean;
+}
+
+export interface OfficialHoliday {
+  id?: string;
+  shamsi_date: string;
+  title: string;
+}
+
+export interface EmployeeData {
+  id?: string;
+  name: string;
+  nationalId: string;
+  password: string;
+  logs: AttendanceLog[];
+  isAdmin?: boolean;
+}
+
+export interface CalculationResult {
+  totalWorkMinutes: number;
+  totalPassMinutes: number;
+  totalRemoteMinutes: number;
+  totalDailyLeaveDays: number;
+  adjustedDutyMinutes: number;
+  overtimeMinutes: number;
+  deficitMinutes: number;
+  formattedTotalWork: string;
+  formattedOvertime: string;
+  formattedDeficit: string;
+}
