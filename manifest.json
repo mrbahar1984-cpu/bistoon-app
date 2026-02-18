@@ -1,0 +1,30 @@
+{
+  "name": "BaharTime | مدیریت هوشمند تردد",
+  "short_name": "BaharTime",
+  "description": "سیستم جامع مدیریت ورود و خروج، مرخصی و گزارش‌گیری کارکرد پرسنل.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#059669",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/emoji/96/cherry-blossom.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://img.icons8.com/emoji/192/cherry-blossom.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://img.icons8.com/emoji/512/cherry-blossom.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
