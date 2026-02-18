@@ -247,7 +247,7 @@ const Dashboard: React.FC<Props> = ({ currentUser, onLogin }) => {
             onClick={handleInstallClick}
             className="flex items-center gap-3 bg-slate-800 text-white px-8 py-4 rounded-2xl font-black text-sm shadow-xl hover:scale-105 transition-all"
           >
-            <Download size={20}/> نصب اپلیکیشن باهار
+            <Download size={20}/> نصب اپلیکیشن BaharTime
           </button>
         )}
       </nav>
