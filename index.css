@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+body { 
+    font-family: "Vazirmatn", sans-serif; 
+    background-color: #f8fafc;
+    direction: rtl; 
+    margin: 0;
+    padding: 0;
+    color: #1e293b;
+    overscroll-behavior-y: contain;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar { width: 5px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+
+/* بهینه‌سازی برای گوشی‌های دارای ناچ */
+@supports (padding-top: env(safe-area-inset-top)) {
+    body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+.no-print {
+  @media print {
+    display: none;
+  }
+}
