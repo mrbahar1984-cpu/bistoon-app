@@ -1175,7 +1175,7 @@ const Dashboard: React.FC<Props> = ({ currentUser, onLogin }) => {
         
         {showInstallBtn && (
           <button onClick={handleInstallClick} className="flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-2xl font-black text-xs shadow-xl animate-bounce">
-            <Download size={16}/> نصب اپلیکیشن باهار
+            <Download size={16}/> نصب اپلیکیشن بهارتایم
           </button>
         )}
       </nav>
