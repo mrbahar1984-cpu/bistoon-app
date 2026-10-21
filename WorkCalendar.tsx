@@ -40,11 +40,11 @@ export interface ShiftDefinition {
 export const PRESET_SHIFTS: ShiftDefinition[] = [
   {
     id: 'STANDARD',
-    name: 'شیفت اداری استاندارد',
-    startTime: '08:00',
+    name: 'شیفت کاری',
+    startTime: '07:00',
     endTime: '16:30',
     workMinutes: 8 * 60,
-    description: '۰۸:۰۰ الی ۱۶:۳۰ (۸ ساعت موظفی + ۳۰ دقیقه استراحت/ناهار)'
+    description: '07:00 الی 16:30'
   },
   {
     id: 'MORNING_EARLY',
